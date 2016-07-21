@@ -21,7 +21,7 @@ Simple Dropdown component for Inferno.
 ### Installation
 
 ```
-$ npm install react-dropdown  --save
+$ npm install inferno-dropdown  --save
 ```
 
 ### Usage
