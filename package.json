@@ -1,6 +1,6 @@
 {
   "name": "inferno-dropdown",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Inferno dropdown component",
   "main": "dist/index.js",
   "style": "style.css",
