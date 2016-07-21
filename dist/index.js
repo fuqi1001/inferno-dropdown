@@ -184,8 +184,9 @@ class Dropdown extends _infernoComponent2.default {
   }
 
   renderOption(option) {
+    const baseClassName = this.props.baseClassName || 'dropdown';
     let optionClass = (0, _classnames2.default)({
-      [`${ this.props.baseClassName }-option`]: true,
+      [`${ baseClassName }-option`]: true,
       'is-selected': option === this.state.selected
     });
 
@@ -199,7 +200,8 @@ class Dropdown extends _infernoComponent2.default {
   }
 
   buildMenu() {
-    let { options, baseClassName } = this.props;
+    const baseClassName = this.props.baseClassName || 'dropdown';
+    let { options } = this.props;
     let ops = options.map(option => {
       if (option.type === 'group') {
         let groupTitle = bp1(`${ baseClassName }-title`, option.name);
@@ -223,7 +225,7 @@ class Dropdown extends _infernoComponent2.default {
   }
 
   render() {
-    const { baseClassName } = this.props;
+    const baseClassName = this.props.baseClassName || 'dropdown';
     const placeHolderValue = typeof this.state.selected === 'string' ? this.state.selected : this.state.selected.label;
     let value = bp4(`${ baseClassName }-placeholder`, placeHolderValue);
     let menu = this.state.isOpen ? bp5(`${ baseClassName }-menu`, this.buildMenu()) : null;
@@ -238,9 +240,7 @@ class Dropdown extends _infernoComponent2.default {
       ontouchend: this.handleMouseDown.bind(this)
     }, [value, bp8(`${ baseClassName }-arrow`)]), menu]);
   }
-
 }
 
-Dropdown.defaultProps = { baseClassName: 'Dropdown' };
 exports.default = Dropdown;
 module.exports = exports['default'];
