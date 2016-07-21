@@ -8,6 +8,10 @@ var _inferno = require('inferno');
 
 var _inferno2 = _interopRequireDefault(_inferno);
 
+var _infernoDom = require('inferno-dom');
+
+var _infernoDom2 = _interopRequireDefault(_infernoDom);
+
 var _infernoComponent = require('inferno-component');
 
 var _infernoComponent2 = _interopRequireDefault(_infernoComponent);
@@ -212,7 +216,7 @@ class Dropdown extends _infernoComponent2.default {
 
   handleDocumentClick(event) {
     if (this.mounted) {
-      if (!ReactDOM.findDOMNode(this).contains(event.target)) {
+      if (!_infernoDom2.default.findDOMNode(this).contains(event.target)) {
         this.setState({ isOpen: false });
       }
     }

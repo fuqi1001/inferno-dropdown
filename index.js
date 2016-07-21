@@ -66,8 +66,9 @@ class Dropdown extends Component {
   }
 
   renderOption (option) {
+    const baseClassName = this.props.baseClassName || 'dropdown'
     let optionClass = classNames({
-      [`${this.props.baseClassName}-option`]: true,
+      [`${baseClassName}-option`]: true,
       'is-selected': option === this.state.selected
     })
 
@@ -86,7 +87,8 @@ class Dropdown extends Component {
   }
 
   buildMenu () {
-    let { options, baseClassName } = this.props
+    const baseClassName = this.props.baseClassName || 'dropdown'
+    let { options } = this.props
     let ops = options.map((option) => {
       if (option.type === 'group') {
         let groupTitle = (<div className={`${baseClassName}-title`}>{option.name}</div>)
@@ -115,7 +117,7 @@ class Dropdown extends Component {
   }
 
   render () {
-    const { baseClassName } = this.props
+    const baseClassName = this.props.baseClassName || 'dropdown'
     const placeHolderValue = typeof this.state.selected === 'string' ? this.state.selected : this.state.selected.label
     let value = (<div className={`${baseClassName}-placeholder`}>{placeHolderValue}</div>)
     let menu = this.state.isOpen ? <div className={`${baseClassName}-menu`}>{this.buildMenu()}</div> : null
@@ -135,8 +137,6 @@ class Dropdown extends Component {
       </div>
     )
   }
-
 }
 
-Dropdown.defaultProps = { baseClassName: 'Dropdown' }
 export default Dropdown
