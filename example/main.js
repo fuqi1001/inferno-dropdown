@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import Inferno from 'inferno'
+import InfernoDOM from 'inferno-dom'
+import Component from 'inferno-component'
 
 import FlatArrayExample from './flatArrayExample'
 import ObjectArrayExample from './objectArrayExample'
@@ -50,4 +51,4 @@ class App extends Component {
 
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'))
+InfernoDOM.render(<App />, document.querySelector('#app'))

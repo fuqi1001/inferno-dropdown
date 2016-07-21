@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import Inferno from 'inferno'
+import Component from 'inferno-component'
 import classNames from 'classnames'
 
 class Dropdown extends Component {

@@ -1,27 +1,28 @@
-react-dropdown
+inferno-dropdown
 ==============
+
+This is a fork of [react-dropdown](http://fraserxu.me/react-dropdown/)
+for [Inferno](https://github.com/trueadm/inferno)
+
+<p>&nbsp;</p>
+<p align="center"><img src="http://infernojs.org/img/inferno.png" width="150px"></p>
+<p>&nbsp;</p>
 
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][downloads-url]
 
-Simple Dropdown component for React, inspired by [react-select](https://github.com/JedWatson/react-select)
-Demo is available [here](http://fraserxu.me/react-dropdown/)
+Simple Dropdown component for Inferno.
 
 ### Why
 
 * The default HTML select element is hard to style
 * And sometime we also want grouped menus
-* if you want more advanced select, check [react-select](https://github.com/JedWatson/react-select)
 
 ### Installation
 
 ```
 $ npm install react-dropdown  --save
 ```
-
-### Changelog
-
-If you want to support React version under v0.13, use react-dropdown@v0.6.1
 
 ### Usage
 
@@ -59,7 +60,7 @@ const options = [
 Monut
 
 ```JavaScript
-import Dropdown from 'react-dropdown'
+import Dropdown from 'inferno-dropdown'
 const defaultOption = options[0]
 <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
 ```
@@ -76,7 +77,7 @@ $ npm start
 
 MIT | Build for [CSViz](https://csviz.org) project @[Wiredcraft](http://wiredcraft.com)
 
-[npm-image]: https://img.shields.io/npm/v/react-dropdown.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/react-dropdown
-[downloads-image]: http://img.shields.io/npm/dm/react-dropdown.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/react-dropdown
+[npm-image]: https://img.shields.io/npm/v/inferno-dropdown.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/inferno-dropdown
+[downloads-image]: http://img.shields.io/npm/dm/inferno-dropdown.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/inferno-dropdown

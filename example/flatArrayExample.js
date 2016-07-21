@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import Inferno from 'inferno'
+import Component from 'inferno-component'
 import Dropdown from '../index.js'
 
 const options = [
