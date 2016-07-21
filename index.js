@@ -1,4 +1,5 @@
 import Inferno from 'inferno'
+import InfernoDOM from 'inferno-dom';
 import Component from 'inferno-component'
 import classNames from 'classnames'
 
@@ -107,7 +108,7 @@ class Dropdown extends Component {
 
   handleDocumentClick (event) {
     if (this.mounted) {
-      if (!ReactDOM.findDOMNode(this).contains(event.target)) {
+      if (!InfernoDOM.findDOMNode(this).contains(event.target)) {
         this.setState({ isOpen: false })
       }
     }
